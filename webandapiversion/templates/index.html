@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Hate Speech Detection System</title>
+</head>
+<body>
+    <h1>Hate Speech Detection System</h1>
+    <form method="POST">
+        <label for="user_input">Enter any Tweet:</label><br>
+        <textarea name="user_input" rows="4" cols="50">{{ user_input }}</textarea><br><br>
+        <input type="submit" value="Submit">
+    </form>
+    {% if automatic_label %}
+    <h2>Automatic Classification: {{ automatic_label }}</h2>
+    {% endif %}
+</body>
+</html>
