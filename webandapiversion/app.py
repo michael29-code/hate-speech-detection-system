@@ -16,7 +16,8 @@ from sklearn.metrics import classification_report # Import jsonify
 
 
 
-app = Flask(__name__)
+app = Flask(__name__, static_url_path='/static')
+
 
 # Load data and preprocess it
 try:
@@ -82,6 +83,7 @@ offensive_hate_words = ["fucking", "kontol", "you such a dick head", "so dumb"]
 
 # Define route for the web interface
 @app.route('/', methods=['GET', 'POST'])
+
 def index():
     if request.method == 'POST':
         user_input = request.form['user_input']
